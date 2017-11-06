@@ -27,7 +27,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>{this.state.speed}</h1>
+        <div className="dashboard">
+          <h1 className="page-title"><img src="Vector_theLab.png" /></h1>
+          <div className="data-list">
+            <div className="data-list__single">
+              <div className="data-list__title">Visits</div>
+              <div className="data-list__int">{this.state.speed}</div>
+              <div className="data-list__description">people</div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
