@@ -35,6 +35,16 @@ class App extends Component {
               <div className="data-list__int">{this.state.speed}</div>
               <div className="data-list__description">people</div>
             </div>
+            <div className="data-list__single">
+              <div className="data-list__title">Counties</div>
+              <div className="data-list__int">2</div>
+              <div className="data-list__description">reached</div>
+            </div>
+            <div className="data-list__single">
+              <div className="data-list__title">Fun</div>
+              <div className="data-list__int">100%</div>
+              <div className="data-list__description">achieved</div>
+            </div>
           </div>
         </div>
       </div>
