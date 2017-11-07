@@ -10,16 +10,23 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      speed: 0
+      visits: 0,
+      countiesCount: 0
     };
   }
 
   componentDidMount() {
     const rootRef = firebase.database().ref().child('dashboard');
     const usersCount = rootRef.child('usersCount');
+    const countiesCount = rootRef.child('countiesReachedCount');
     usersCount.on('value', snap => {
       this.setState({
-        speed: snap.val()
+        visits: snap.val()
+      });
+    });
+    countiesCount.on('value', snap => {
+      this.setState({
+        countiesCount: snap.val()
       });
     });
   }
@@ -32,12 +39,12 @@ class App extends Component {
           <div className="data-list">
             <div className="data-list__single">
               <div className="data-list__title">Visits</div>
-              <div className="data-list__int">{this.state.speed}</div>
+              <div className="data-list__int">{this.state.visits}</div>
               <div className="data-list__description">people</div>
             </div>
             <div className="data-list__single">
               <div className="data-list__title">Counties</div>
-              <div className="data-list__int">2</div>
+              <div className="data-list__int">{this.state.countiesCount}</div>
               <div className="data-list__description">reached</div>
             </div>
             <div className="data-list__single">
