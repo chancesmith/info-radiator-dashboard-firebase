@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import * as firebase from 'firebase';
-import { config } from './config.js'
-
-firebase.initializeApp(config);
 
 class App extends Component {
   constructor() {
@@ -35,7 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="dashboard">
-          <h1 className="page-title"><img src="Vector_theLab.png" /></h1>
+          <h1 className="page-title"><img src="Vector_theLab.png" alt="Driving Innovation logo"/></h1>
           <div className="data-list">
             <div className="data-list__single">
               <div className="data-list__title">Visits</div>
